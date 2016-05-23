@@ -1,5 +1,6 @@
 ---
 - hosts: vagrant
+  become: yes
   tasks:
     - name: Install packages
       apt: name={{ item }} state=present
