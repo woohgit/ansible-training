@@ -1,0 +1,7 @@
+---
+- hosts: vagrant
+  vars_files:
+    - vars/main.yml
+  roles:
+    - geerlingguy.apache
+    - kamaln7.swapfile

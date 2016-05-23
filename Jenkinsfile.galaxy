@@ -9,7 +9,7 @@ stage "Install dependency"
 
 node {
     wrap([$class: 'AnsiColorBuildWrapper', colorMapName: "xterm"]) {
-        sh 'ansible-playbook install -r requirements.yml'
+        sh 'ansible-galaxy install -r requirements.yml'
     }
 }
 
@@ -18,7 +18,7 @@ stage "Check dry-run"
 node {
     wrap([$class: 'AnsiColorBuildWrapper', colorMapName: "xterm"]) {
         ansiblePlaybook(
-            playbook: 'server.yml',
+            playbook: 'starschema.yml',
             inventory: 'inventory.ini',
             credentialsId: '96b3fe82-e6a4-45eb-9e8d-0a512cba5a9c',
             extras: '--check --diff',
@@ -32,7 +32,7 @@ stage "Deploy to production"
 node {
     wrap([$class: 'AnsiColorBuildWrapper', colorMapName: "xterm"]) {
         ansiblePlaybook(
-            playbook: 'server.yml',
+            playbook: 'starschema.yml',
             inventory: 'inventory.ini',
             credentialsId: '96b3fe82-e6a4-45eb-9e8d-0a512cba5a9c',
             colorized: true

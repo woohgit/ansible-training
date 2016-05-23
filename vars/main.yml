@@ -1,0 +1,12 @@
+apache_listen_ip: "*"
+apache_listen_port: 8080
+
+apache_state: started
+apache_create_vhosts: true
+apache_vhosts:
+  - servername: "ansible.starschema.net"
+    documentroot: "/var/www/ansible.starschema.net"
+
+swapfile_size: 2GB
+swapfile_swappiness: 10
+swapfile_location: /root/myswapfile
