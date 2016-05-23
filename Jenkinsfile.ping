@@ -7,5 +7,5 @@ node {
     ansiblePlaybook( 
         playbook: 'ping.yml',
         inventory: 'inventory.ini', 
-        credentialsId: '5621daa6-4dff-4747-9b95-1a2878bdf64c')
+        credentialsId: 'd9b0be15-1b29-4924-b91c-d25988375431')
 }
