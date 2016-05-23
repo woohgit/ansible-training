@@ -9,7 +9,7 @@ stage "Install dependency"
 
 node {
     wrap([$class: 'AnsiColorBuildWrapper', colorMapName: "xterm"]) {
-        sh 'ansible-plabyook install -r requirements.yml'
+        sh 'ansible-playbook install -r requirements.yml'
     }
 }
 
