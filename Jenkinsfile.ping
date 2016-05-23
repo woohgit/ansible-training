@@ -4,7 +4,7 @@ node {
     deleteDir()
     checkout scm
     
-    withEnv(["ANSIBLE_FORCE_COLOR=true"]) {
+    wrap([$class: 'AnsiColorBuildWrapper', colorMapName: 'xterm']) {
         ansiblePlaybook(
             playbook: 'ping.yml',
             inventory: 'inventory.ini',
