@@ -3,6 +3,6 @@
   tasks:
     - name: Install packages
       apt: name={{ item }} state=present
-      with_itemss:
+      with_items:
         - apache2
         - varnishhhhh
