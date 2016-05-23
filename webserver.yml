@@ -2,7 +2,7 @@
 - hosts: vagrant
   tasks:
     - name: Install packages
-      apt: name={{ item }} state=present
+      apt: name={{ item }} state=presento
       with_items:
         - apache2
         - varnishapt
