@@ -35,7 +35,7 @@ node {
             playbook: 'webserver.yml',
             inventory: 'inventory.ini',
             credentialsId: '96b3fe82-e6a4-45eb-9e8d-0a512cba5a9c',
-            extras: '--check --diff',
+            extras: '--check --diff --list-tasks',
             colorized: true
             )
     }
