@@ -1,0 +1,11 @@
+stage 'Checking connectivity'
+
+node {
+    deleteDir()
+    checkout scm
+    
+    ansiblePlaybook( 
+        playbook: 'ping.yml',
+        inventory: 'inventory.ini', 
+        credentialsId: '5621daa6-4dff-4747-9b95-1a2878bdf64c')
+}
