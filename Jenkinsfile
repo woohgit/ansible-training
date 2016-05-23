@@ -16,7 +16,6 @@ node {
 stage "Check syntax"
 
 node {
-
     wrap([$class: 'AnsiColorBuildWrapper', colorMapName: "xterm"]) {
         ansiblePlaybook(
             playbook: 'webserver.yml',
@@ -26,7 +25,11 @@ node {
             colorized: true
             )
     }
+}
 
+stage "Check dry-run"
+
+node {
     wrap([$class: 'AnsiColorBuildWrapper', colorMapName: "xterm"]) {
         ansiblePlaybook(
             playbook: 'webserver.yml',
@@ -36,5 +39,4 @@ node {
             colorized: true
             )
     }
-
 }
